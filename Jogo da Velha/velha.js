@@ -54,11 +54,11 @@ function check() {
     for (pos of positions) {
         if (pos.every((item) => items.includes(item))) {
             alert("O JOGADOR '" + playerLastMove + "' GANHOU!");
-            if (player === 'X') {
-                placar.innerHTML = o++;
-            }
-            if(player === 'O'){
+            if (playerLastMove === 'X') {
                 placar.innerHTML = x++;
+            }
+            if(playerLastMove === 'O'){
+                placar.innerHTML = o++;
             }
             init();
             return;
