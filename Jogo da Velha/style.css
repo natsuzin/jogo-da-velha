@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: rgb(175, 224, 236);
+    background-color: transparent;
     border-radius: 12px;
 }
 
@@ -12,7 +12,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #f0f0f0;
+    background: linear-gradient(
+        90deg,
+        rgb(175, 224, 236) 0%,
+        rgb(188, 245, 197) 100%
+    );
     background-size: cover;
 }
 
@@ -58,5 +62,5 @@ hr {
     cursor: pointer;
     font-size: 50px;
     font-family: cursive;
-    background: #f0f0f0;
+    background: transparent;
 }
