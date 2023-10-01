@@ -1,32 +1,34 @@
 <html>
-
-<head>
+  <head>
     <title>JOGO DA VELHA</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <main>
-        <div class="botao-voltar">
-            <button nome="voltar" onClick="fuiClicado()">VOLTAR</button>
-        </div>
-        <h1>JOGO DA VELHA</h1>
-        <hr />
-        <h2 class="placar"></h2>
-        <div class="game">
-            <button opcao="1"></button>
-            <button opcao="2"></button>
-            <button opcao="3"></button>
-            <button opcao="4"></button>
-            <button opcao="5"></button>
-            <button opcao="6"></button>
-            <button opcao="7"></button>
-            <button opcao="8"></button>
-            <button opcao="9"></button>
-        </div>
+      <div class="botao-voltar">
+        <button nome="voltar" position="fixed" onClick="fuiClicado()">VOLTAR</button>
+      </div>
+      <h1>JOGO DA VELHA</h1>
+      <hr />
+      <div class="game">
+        <button opcao="1" border-left: "none"></button>
+        <button opcao="2"></button>
+        <button opcao="3"></button>
+        <button opcao="4"></button>
+        <button opcao="5"></button>
+        <button opcao="6"></button>
+        <button opcao="7"></button>
+        <button opcao="8"></button>
+        <button opcao="9"></button>
+      </div>
+      <div>
+        <h2 class="placarX"></h2>
         <h2 class="currentPlayer"></h2>
+        <h2 class="placarO"></h2>
+      </div>
     </main>
-    <script src="velha.js"></script>
-</body>
 
+    <script src="velha.js"></script>
+  </body>
 </html>

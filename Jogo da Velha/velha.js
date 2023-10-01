@@ -1,5 +1,6 @@
 const currentPlayer = document.querySelector(".currentPlayer");
-const placar = document.querySelector(".placar");
+const placarX = document.querySelector(".placarX");
+const placarO = document.querySelector(".placarO");
 let selected;
 let player = "X";
 let x = 0;
@@ -18,9 +19,9 @@ let positions = [
 function init() {
   selected = [];
 
-  placar.innerHTML = `X = ${x} | O = ${o}`;
-  currentPlayer.innerHTML = `JOGADOR DA VEZ: ${player}`;
-
+  placarX.innerHTML = `JOGADOR X = ${x}`;
+  placarO.innerHTML = `JOGADOR O = ${o}`;
+  currentPlayer.innerHTML = `${player}`;
   document.querySelectorAll(".game button").forEach((item) => {
     item.innerHTML = "";
     item.addEventListener("click", newMove);
@@ -40,7 +41,7 @@ function newMove(e) {
   }, [100]);
 
   player = player === "X" ? "O" : "X";
-  currentPlayer.innerHTML = `JOGADOR DA VEZ: ${player}`;
+  currentPlayer.innerHTML = `${player}`;
 }
 
 function check() {
@@ -55,12 +56,11 @@ function check() {
     if (pos.every((item) => items.includes(item))) {
       alert("O JOGADOR '" + playerLastMove + "' GANHOU!");
       if (playerLastMove === "X") {
-        placar.innerHTML = x++;
+        placarX.innerHTML = x++;
       }
       if (playerLastMove === "O") {
-        placar.innerHTML = o++;
+        placarO.innerHTML = o++;
       }
-      let player = "X";
       init();
       return;
     }
