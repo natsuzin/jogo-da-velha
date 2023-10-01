@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   background-color: transparent;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 body {
@@ -13,7 +13,7 @@ body {
   justify-content: center;
   background: linear-gradient(
     90deg,
-    rgb(163, 228, 245) 0%,
+    rgb(142, 221, 240) 0%,
     rgb(188, 245, 197) 100%
   );
   background-size: cover;
@@ -27,34 +27,35 @@ main {
 
 .placarX {
   top: 80%;
-  left: 30%;
+  left: 29%;
   border: solid;
-  border-color: rgb(205, 169, 255);
+  border-color: rgb(196, 154, 255);
 }
 
 .placarO {
   top: 80%;
   left: 60%;
   border: solid;
-  border-color: rgb(232, 177, 221);
+  border-color: rgb(231, 163, 218);
 }
 
 .currentPlayer{
   font-size: 50;
   top: 77.5%;
-  left: 45%;
+  left: 44.5%;
 }
 
 .botao-voltar button{
-  position: absolute;
-  top: 10%;
-  left: 10%;
+  position: fixed;
+  background-size: cover;
+  top: 100px;
+  left: 100px;
   transform: translate(-10%, -10%);
-  width: 80px;
-  height: 28px;
+  width: 85px;
+  height: 30px;
   margin: 10px;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 16px;
   font-family: cursive;
   background: linear-gradient(
     90deg,
@@ -63,32 +64,36 @@ main {
   );
   border-top-color: rgb(205, 169, 255);
   border-left-color: rgb(205, 169, 255);
-  border-bottom-color: rgb(255, 214, 246);
-  border-right-color: rgb(255, 214, 246);
+  border-bottom-color: white;
+  border-right-color: white;
 }
 
 h1 {
+  position: fixed;
+  top: 15%;
+  left: 42.7%;
   text-align: center;
   font-family: cursive;
 }
 
 h2 {
   text-align: center;
-  font-size: 18px;
+  font-size: 20px;
   font-family: cursive;
   background: transparent;
-  position: absolute;
-  width: 180px;
+  position: fixed;
+  width: 200px;
   height: 34px;
   margin: 5px;
 }
 
 hr {
-  font-weight: bold;
-  height: 3px;
-  background: rgb(0, 0, 0);
-  margin-bottom: 5px;
-  border-color: black
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    rgb(205, 169, 255) 0%,
+    rgb(255, 214, 246) 100%
+  );
 }
 
 .game {
@@ -97,6 +102,7 @@ hr {
 }
 
 .game button {
+  border-radius: 7px;
   width: 100px;
   height: 100px;
   margin: 5px;
