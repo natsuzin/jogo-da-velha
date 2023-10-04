@@ -56,6 +56,7 @@ function check() {
     if (pos.every((item) => items.includes(item))) {
       alert("O JOGADOR '" + playerLastMove + "' GANHOU!");
       if (playerLastMove === "X") {
+        player = "X";
         placarX.innerHTML = x++;
       }
       if (playerLastMove === "O") {
